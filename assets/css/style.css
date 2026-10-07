@@ -1,9 +1,34 @@
 div {
-  color: sienna;
+  /* color: sienna; */
 }
 
 .first-div {
-  color: blue
+  /* static values */
+  color: blue;
+  
+  /* RGB #(00 - FF) или rgb(0-255) */
+  /* color: rgb(50, 104, 52);
+  color: #000000; */
+
+  /* RGBA */
+  /* color: rgb(198 111 111 / 42%);
+  color: #c66f6f6b; */
+
+  /* HSL */
+  /* color: hsl(55deg 43.28% 60.59% / 41.96%); */
+
+/*   
+  border: 0;
+  border-bottom-width: 2px;
+  border-style: solid;
+  border-color: rgb(242 45 155 / 67%);
+  border-top-width: 2px;
+  border-top-color: blue; */
+
+  /* border: 2px dashed black;
+  border-bottom-color: red; */
+
+
 }
 
 /* #login {
@@ -13,3 +38,173 @@ div {
 * {
   color: red;
 } */
+
+body {
+  /* font-family: Roboto, sans-serif; */
+}
+
+.div-text {
+  font-family: Roboto, sans-serif;
+}
+
+.div-text-bold {
+  /* font-family: "Segoe UI", Arial, sans-serif; */
+  /* font-family: Roboto, sans-serif; */
+  font-weight: bold;
+  font-style: italic;
+  font-size: 30px;
+  /* Трансформация текста */
+  /* text-transform: lowercase; */
+  
+  /* Оформление текста */
+  /* text-decoration: underline; */
+  
+  /* Межбуквенный интервал */
+  /* letter-spacing: 5px; */
+
+  /* Тень текста */
+  /* text-shadow: 5px 4px 6px #0000008c; */
+
+  /* Высота строки */
+  /* line-height: 0.9; */
+
+  /* Расположение текста по горизонтали (внутри размеров элемента) */
+  /* text-align: center; */
+
+  /* Отступ первой строки многострочного элемента */
+  /* text-indent: 30px; */
+
+  /* padding - внутренний отступ от границ элемента до его контента */
+  /* padding-top: 30px; */
+  /* padding: 30px; */
+
+  /* margin - внешний отступ от границ элемента до других элементов */
+  /* margin-top: 30px; */
+  /* margin: 50px; */
+
+  /* border-radius - величина скругления углов границ */
+  /* border-radius: 15px; */
+}
+
+.inner-span {
+  /* Зависит от размера font-size родительского элемента */
+  /* font-size: 0.5em; */ 
+  /* font-size: 50% */
+
+  /* Зависит от размера font-size корневого HTML элемента */
+  /* font-size: 0.5rem */
+}
+
+.div-text-light {
+  /* font-family: Roboto, sans-serif; */
+  font-weight: 100;
+}
+
+.circle-container {
+  position: relative;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(241, 94, 94);
+  /* 50% позволяет сделать из квадрата круг */
+  border-radius: 50%;
+  
+  /* Трансформация элементов */
+  /* transform: translateY(20px);
+  transform: translate(20px, 50px); 
+  transform: rotate(67deg) scale(0.5); */
+
+  
+
+  /* position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle:hover {
+  background-color: blue;
+  
+  width: 300px;
+  
+  
+  /* Автоматические переходы  */
+  /* transition-property: background-color;
+  transition-duration: 200ms;
+  transition-delay: 2s;
+  transition-timing-function: ease-in; */
+
+
+  /* transition: background-color 200ms 2s linear; */
+  /* transition: all 2s linear; */
+}
+
+@keyframes css-animation {
+  0% {
+  }
+
+  20% {
+    background-color: #fff600;
+    transform: rotate(30deg);
+  }
+
+  40% {
+    transform: translateX(300px);
+    background-color: #ff8e00;
+  }
+
+  60% {
+    transform: translateX(300px);
+    background-color: #ff8e00;
+  }
+
+  51% {
+     transform: translateX(300px) rotate(0);
+  }
+
+  80% {
+    transform: translateX(0) rotate(-360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animation-example {
+  background-color: #3eaf88;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  font-family: 'Roboto';
+  animation-name: css-animation;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  display: inline-block;
+  animation-iteration-count: infinite;
+}
+
+#head-1 {
+  position: relative;
+}
+
+#head-1:hover .head-1-circle {
+  display: inline-block;
+}
+
+.head-1-circle {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(241, 94, 94);
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+}
