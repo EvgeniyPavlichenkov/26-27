@@ -1,0 +1,117 @@
+@font-face {
+  font-family: Montserrat;
+  font-weight: bold;
+  src: url(../fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+}
+
+body {
+  padding: 200px;
+  font-family: Montserrat, sans-serif;
+}
+
+.product-card {
+  width: 330px;
+}
+
+.product-card__content {
+  padding: 25px 25px 35px;
+}
+
+.product-card__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.card-top {
+  position: relative;
+  height: 300px;
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-top__image {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.card-top__sale {
+  color: #FFFFFF;
+  background-color: #E74040;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon-buttons {
+  align-self: center;
+  display: flex;
+  gap: 10px;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 200ms linear;
+}
+
+.icon-button:hover {
+  transform: scale(1.05);
+}
+
+.icon-button_heart {
+  background-image: url(../images/svg/heart.svg);
+}
+
+.icon-button_cart {
+  background-image: url(../images/svg/cart.svg);
+}
+
+.icon-button_eye {
+  background-image: url(../images/svg/eye.svg);
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.2px;
+  color: #23A6F0;
+  font-weight: bold;
+}
+
+.rating {
+  background-color: #252B42;
+  border-radius: 20px;
+  display: flex;
+  padding: 5px;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating::before {
+  content: url(../images/svg/star.svg);
+  width: 16px;
+  height: 16px;
+}
