@@ -210,3 +210,217 @@ for (let i = 0; i < matrix.length; i++) {
   console.log(rowStringValues);
 }
 
+// function sumF(a, b) {
+//   console.log('Inside sumF', a, b);
+//   const result = a + b;
+// }
+
+// function sumF(a, b) {
+//   const result = a + b;
+//   return result;
+// }
+
+// const sumF = (a, b) => {
+//   return a + b;
+// }
+
+// const sumF = (a, b) => {
+//   return a + b;
+// }
+
+// let sumF = (a, b) => {
+//   return a + b;
+// }
+
+// console.log(sumF, typeof sumF);
+// const sumResult = sumF(2, 2);
+// console.log(sumResult);
+
+
+// sumF = (a, b) => {
+//   return a - b;
+// }
+
+// console.log(sumF);
+// console.log(sumF(5, 2));
+
+// sumF = 10;
+
+// console.log(sumF);
+
+// // Hoisting
+// function sumF(a, b) {
+//   return a + b;
+// }
+
+// const greet = (name = 'Unknown', age) => {
+//   // if (name === undefined)
+//   // if (!name) {
+//   //   console.log('Hello, Unknown!');
+//   //   return;
+//   // }
+
+//   console.log('Hello,', name, '!', age);
+// }
+
+// greet(undefined, 20);
+
+//arguments
+// function argsFunction () {
+//   let result = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     const argument = arguments[i];
+//     // result = result + argument;
+//     result += argument;
+//   }
+//   console.log(result)
+// }
+
+// const argsFunction = (...args) => {
+//   let result = 0;
+//   // for (let i = 0; i < args.length; i++) {
+//   //   const element = args[i];
+//   //   result += element;
+//   // }
+
+//   for (const element of args) {
+//     result += element;
+//   }
+
+//   console.log(result);
+// }
+
+// argsFunction(1, 2, 3, 4, 10);
+
+// const calculate = (a, b, func) => {
+//   console.log('The math result of', a, b, '=', func(a, b));
+// }
+
+// const sumF = (a, b) => {
+//   return a + b;
+// }
+
+// const subF = (a, b) => {
+//   return a - b;
+// }
+
+// const multF = (a, b) => {
+//   return a * b;
+// }
+
+// calculate(3, 4, sumF);
+// calculate(3, 4, subF);
+// calculate(3, 4, multF);
+
+// const greetFactory = (type) => {
+//   if (type === 'person') {
+//     return function(name) {
+//       console.log('Hello World from function', name);
+//     }
+//   }
+
+//   if (type === 'orc') {
+//     return function(name) {
+//       console.log('Arghhh from function', name)
+//     }
+//   }
+
+//   return function(){};
+// }
+
+// // console.log(greetFactory('person'));
+// // console.log(greetFactory('orc'));
+// // console.log(greetFactory('dog'));
+// const greetPerson = greetFactory('person');
+// greetPerson('Tom');
+// greetFactory('orc')('John');
+// greetFactory('dog')();
+
+// window.currentUser = {
+//   name: 'Tom'
+// };
+
+// window.gVar = 50;
+
+// console.log(window.gVar)
+
+
+
+// {
+//   const message = 'Hello';
+//   console.log('Inside', message);
+// }
+
+// {
+//   const message = 'Goodbye';
+//   console.log('Inside', message);
+// }
+
+// alert('Hello!')
+// for (let index = 0; index < [1,2,3,4,5].length; index++) {
+//   console.log('index=', index);
+// }
+
+// console.log('index=', index);
+
+// function sayHiBye(firstName, lastName) {
+
+//   function getFullName() {
+//     return firstName + ' ' + lastName;
+//   }
+
+//   console.log('Hello,', getFullName());
+//   console.log('Bye,', getFullName());
+// }
+
+// sayHiBye('Tom', 'Toms');
+// sayHiBye('John', 'Johns');
+
+
+// closure
+// const makeCounter = () => {
+//   let count = 0;
+
+//   return () => {
+//     // count = count + 1;
+//     // return count 
+//     return count++;
+//   }
+// }
+
+// const counter = makeCounter();
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
+
+// const counter2 = makeCounter();
+// console.log(counter2());
+// console.log(counter2());
+// console.log(counter2());
+
+// console.log(counter());
+
+// // Function Expression
+// const hi = function(){}
+// const hi = () => {}
+
+// const phrase = 'Hello';
+
+// function say(name) {
+//   console.log(phrase, ' ', name);
+// }
+
+// say('Tom');
+
+function foo(name) {
+  console.log('Inside 1 name', name);
+  name = 'John';
+  console.log('Inside 2 name', name);
+}
+
+let otherName = 'Tom';
+console.log('Outside 1 name', otherName);
+foo(otherName);
+console.log('Outside 2 name', otherName);
