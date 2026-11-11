@@ -672,25 +672,25 @@ console.log('After confirm'); */
 //   console.log('Hello')
 // }, 1000)
 
-localStorage.setItem('name', 'Tom');
-const nameFromLocalStorage = localStorage.getItem('name');
-console.log(nameFromLocalStorage)
+// localStorage.setItem('name', 'Tom');
+// const nameFromLocalStorage = localStorage.getItem('name');
+// console.log(nameFromLocalStorage)
 
-class User {
-   name
-   age
-   isStudent
+// class User {
+//    name
+//    age
+//    isStudent
 
-   constructor(name, age, isStudent){ 
-    this.name = name;
-    this.age = age;
-    this.isStudent = isStudent;
-   }
+//    constructor(name, age, isStudent){ 
+//     this.name = name;
+//     this.age = age;
+//     this.isStudent = isStudent;
+//    }
 
-   sayHi(){
-    console.log('Hello from', this.name);
-   }
-}
+//    sayHi(){
+//     console.log('Hello from', this.name);
+//    }
+// }
 
 // const user = {
 //   name: 'Tom',
@@ -698,14 +698,98 @@ class User {
 //   isStudent: true
 // };
 
-const user = new User('Tom', 21, false);
-console.log(user)
-user.sayHi();
+// const user = new User('Tom', 21, false);
+// console.log(user)
+// user.sayHi();
 
-localStorage.setItem('user', JSON.stringify(user))
-const userFromLocalStorage = JSON.parse(localStorage.getItem('user'));
-userFromLocalStorage.__proto__ = User.prototype;
-console.log(userFromLocalStorage);
-userFromLocalStorage.sayHi();
+// localStorage.setItem('user', JSON.stringify(user))
+// const userFromLocalStorage = JSON.parse(localStorage.getItem('user'));
+// userFromLocalStorage.__proto__ = User.prototype;
+// console.log(userFromLocalStorage);
+// userFromLocalStorage.sayHi();
 
+// document.getElementById('my-div').addEventListener('click', () => {
+//    console.log('div clicked');
+// })
+
+// let i = 0;
+// let start = Date.now();
+
+// function count(){
+
+//    // do {
+//    //    i++;
+//    // } while (i % 1e6 != 0);
+
+//    // if (i === 1e9) {
+//    //    console.log('Done in', (Date.now() - start), 'ms');
+//    // } else {
+//    //    setTimeout(count);
+//    // }
+
+//    // перенесём планирование очередного вызова в начало
+//    if (i < 1e9 - 1e6) {
+//       setTimeout(count); // запланировать новый вызов
+//    }
+
+//    do {
+//       i++;
+//    } while (i % 1e6 != 0);
+
+//    if (i == 1e9) {
+//       console.log('Done in', (Date.now() - start), 'ms');
+//    }
+
+// }
+
+
+// count();
+
+// let i = 0;
+// function count() {
+//    do {
+//       i++;
+//       document.getElementById('my-div').innerHTML = i;
+//    } while (i % 1e3 != 0);
+
+//     if (i < 1e7) {
+//       setTimeout(count);
+//     }
+// }
+// count();
+
+// const funcPromise = Promise.resolve('Message');
+// funcPromise.then((msg) => {console.log('Promise Done', msg)});
+
+// console.log('Before');
+// setTimeout(() => {
+//    console.log('Set timeout');
+// });
+// Promise.resolve().then(() => {
+//    console.log('Promise')
+// });
+// console.log('After');
+
+// Before, After, Promise, Set timeout
+// console.log('Before');
+
+// new Promise((resolve, reject) => {
+//    console.log('Inside Promise')
+//    setTimeout(() => {
+//       console.log('Inside setTimeout');
+//       resolve('Promise Done');
+//    }, 3000);
+// }).then((msg) => {
+//    console.log('Success', msg);
+// })
+
+// console.log('After');
+
+// document.body.style.backgroundColor = 'red';
+// setTimeout(() => {document.body.style.backgroundColor = ''}, 5000);
+
+// const headElement = document.head;
+// const paragraphDivElements = document.getElementsByClassName('paragraph');
+// paragraphDivElements[0].style = 'color: blue;'
+// console.log(document.head.nextElementSibling);
 
