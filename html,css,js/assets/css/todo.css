@@ -1,0 +1,96 @@
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter/static/Inter_18pt-Light.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Inter';
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  padding: 41px 32px 57px;
+  background-color: white;
+  box-shadow: 0 0 14px 6px rgb(0 0 0 / 10%);
+  width: 400px;
+  position: relative;
+}
+
+.container__top-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.list { 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list__item {
+  font-size: 15px;
+  padding: 5px 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list__item-checkbox {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid #C4C4C4;
+}
+
+.list__item-delete {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/svg/delete.svg);
+}
+
+.list__item_done {
+  color: #B5B5BA;
+  text-decoration: line-through;
+}
+
+.list__item_done .list__item-checkbox {
+  border-color: #B5B5BA;
+  background-color: #B5B5BA;
+  background-image: url(../images/svg/done.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.list__new-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.list__new-item-input {
+  outline: none;
+}
+
+.list__new-item:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #E2E2E2;
+  border-radius: 6px;
+}
