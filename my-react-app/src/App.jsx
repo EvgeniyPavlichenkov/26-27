@@ -1,11 +1,60 @@
-import { useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import {Count} from './Count';
+import { useCount, useLocalStorageCount } from './useCount'
+
+
+// render = вызов функции компонентов
+// rerender = повторный вызов функции компонентов
+// rerender происходит только в двух случаях:
+//   - изменение состояния компонента (локальное состояние). Хук useState
+//   - "изменение props компонента" = ререндере родительского компонента
+
+
+// Component lifecycle
+// - mount (первый рендер компонента) 
+// - update (ререндер компонента)
+// - unmount (удаление компонента из дерева элементов)
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+
+  // const onButtonClick = () => {
+  //   setCount((count) => count + 1);
+  // }
+
+  // const state = useState(12);
+  // state[0] - значение состояния
+  // state[1] - функция для обновления состояния
+
+  // const count = state[0];
+  // const setCount = state[1];
+
+
+  const a = useRef(10);
+
+  const {count, setCount} = useLocalStorageCount();
+
+  const onButtonClick = () => {
+    setCount(count + 1);
+    a.current = a.current + 1;
+  }
+
+  console.log(a.current);
+
+  const renderCountComponent = () => {
+    if (count === undefined || count >= 10) {
+      return null;
+    }
+
+    return (
+      <Count countValue={count}></Count>
+    );
+  }
+
 
   return (
     <>
@@ -24,10 +73,15 @@ function App() {
         <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={onButtonClick}
         >
           Count is {count}
         </button>
+
+        {renderCountComponent()}
+
+        {/* {count !== undefined ? <Count countValue={count}></Count> : null} */}
+        
       </section>
 
       <div className="ticks"></div>
